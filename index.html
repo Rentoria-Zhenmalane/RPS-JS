@@ -36,6 +36,10 @@
     playGame('Scissors');
   ">Scissors</button>
 
+  <p class="js-result"></p>
+
+  <p class="js-moves"></p>
+
   <p class="js-score"></p>
 
   <button onclick="
@@ -43,6 +47,7 @@
     score.losses = 0;
     score.ties = 0; 
     localStorage.removeItem('score');
+    updateScoreElement();
     ">
     Reset Score
   </button>
@@ -74,8 +79,8 @@
   -to fix error of null value.
 */
 
-    document.querySelector('.js-score')
-      .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+    updateScoreElement(); //Updates score on page load
+
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -122,10 +127,18 @@
       //After updating the score, save it to localStorage(only supports string). So you have to convert it into JSON string.
       //first string is called the NAME('message'), the second is the VALUE('hello')
 
+      updateScoreElement(); //Updates score after each round
 
-      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`)
+      document.querySelector('.js-results')
+        .innerHTML = result;
 
+      document.querySelector('js-moves')
+        .innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}`;
+
+    }
+    function updateScoreElement() {
+      document.querySelector('.js-score')
+        .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
     }
 
 
@@ -149,13 +162,13 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`)
 
       // Variables that can be accessed anywhere is called Global Variables
 
-      //Scopes ( {} ) help us avoid naming conflicts.  Whatever variables exist inside the scopes only exists inside the scope. -->
+      //Scopes ( {} ) help us avoid naming conflicts.  Whatever variables exist inside the scope only exists inside the scope. -->
 
 
       //Javascript is case sensitive. Rock is different from rock. Make sure to stay consistent with your naming conventions.
 
 
-
+      //6:13
     }
 
   </script>
