@@ -38,7 +38,7 @@
 
   <p class="js-result"></p>
 
-  <p class="js-moves"></p>
+  <p class="js-move"></p>
 
   <p class="js-score"></p>
 
@@ -129,13 +129,14 @@
 
       updateScoreElement(); //Updates score after each round
 
-      document.querySelector('.js-results')
+      document.querySelector('.js-result')
         .innerHTML = result;
 
-      document.querySelector('js-moves')
+      document.querySelector('.js-move')
         .innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}`;
 
     }
+
     function updateScoreElement() {
       document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
@@ -143,7 +144,7 @@
 
 
     function pickComputerMove() {
-      const randomNumber = Math.random();
+      const randomNumber = Math.random(); // Generates random number from 0-1
 
       let computerMove = ''; //how do we access computerMove outside a function? The answer is to use return statement
 
@@ -157,7 +158,7 @@
       return computerMove;
 
       //return 'rock'; // returning a value from a function
-      //return; // will return undeifned. However, this will not return anything because we already have a return above. Only the first return will be run.
+      //return; // will return undeifned. However, this will not return anything because we already have a return above. Only the first return will run.
       //console.log('after');
 
       // Variables that can be accessed anywhere is called Global Variables
