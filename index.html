@@ -3,14 +3,31 @@
 
 <head>
   <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      background-color: rgb(25, 25, 25);
+      color: white;
+      font-family: Arial;
+    }
+
+    .RPS {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .rock-image {
+      height: 100px;
+    }
+  </style>
 </head>
 
 <body>
-  <p>Rock Papers Scissors</p>
+  <p class="RPS">Rock Paper Scissors</p>
   <button onclick="
     playGame('Rock');
     
-    ">Rock</button>
+    ">
+    <img src="images/rock-emoji.png" class="rock-image"> </button>
 
   <button onclick="
       playGame('Paper');
@@ -47,12 +64,12 @@
     score.losses = 0;
     score.ties = 0; 
     localStorage.removeItem('score');
-    updateScoreElement();
+    updateScoreElement(); // 
     ">
     Reset Score
   </button>
 
-  <script> // Why create function in script element? Because script elemnt runs when the page is loaded
+  <script> // Why create function in script element? Because script element runs when the page is loaded
     let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
       losses: 0,
@@ -62,7 +79,6 @@
     //shortcut to fix the error of null value
     //Loads the score from localStorage through getItem.
     //convert it back into an object.
-
     //Keep the object outside function/scope to update the score from last time.
     //we're using objects because these 3 are related to each other.
 
@@ -79,7 +95,7 @@
   -to fix error of null value.
 */
 
-    updateScoreElement(); //Updates score on page load
+    updateScoreElement(); //Updates score on page load.
 
 
     function playGame(playerMove) {
