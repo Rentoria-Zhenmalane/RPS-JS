@@ -22,8 +22,29 @@
     .move-button {
       background-color: transparent;
       border: 3px solid white;
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 50px;
+
+    }
+
+    .score {
+      margin-top: 50px;
+    }
+
+    .reset-score-button {
+      font-size: 15px;
+      padding: 9px 15px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -59,13 +80,13 @@
     playGame('Scissors');
   " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
 
-  <p class="js-result"></p>
+  <p class="js-result result">Choose your move</p>
 
-  <p class="js-move"></p>
+  <p class="js-move"> </p>
 
-  <p class="js-score"></p>
+  <p class="js-score score"></p>
 
-  <button onclick="
+  <button class="reset-score-button" onclick="
     score.wins = 0;
     score.losses = 0;
     score.ties = 0; 
@@ -155,7 +176,8 @@
         .innerHTML = result;
 
       document.querySelector('.js-move')
-        .innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}`;
+        .innerHTML = `YOU: <img src="images/${playerMove}-emoji.png" class="move-icon"> COMPUTER:<img
+        src="images/${computerMove}-emoji.png" class="move-icon">`;
 
     }
 
@@ -191,7 +213,7 @@
       //Javascript is case sensitive. Rock is different from rock. Make sure to stay consistent with your naming conventions.
 
 
-      //6:13
+      //7:25:08
     }
 
   </script>
