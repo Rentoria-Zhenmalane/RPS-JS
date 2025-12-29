@@ -80,5 +80,11 @@ body {
 }
 
 .rps-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  Width: 400px;
   border: 3px solid rgb(53, 255, 70);
+  align-items: center;
+
 }
