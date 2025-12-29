@@ -4,12 +4,17 @@ body {
   font-family: Arial;
   margin: 0;
   padding-top: 180px;
+  display: flex;
+  /* activates the flexbox*/
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .header {
   height: 150px;
   display: flex;
-  flex-direction: row;
+
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -62,13 +67,15 @@ body {
 
 .buttons-parent {
   display: flex;
+  /* makes children line up horizontally*/
   border: 3px solid rgb(53, 255, 70);
-  display: center;
+  gap: 80px;
+
 }
 
 .buttons {
   border: 3px solid rgb(53, 255, 70);
-  margin-right: 50px;
+
 
 }
 
