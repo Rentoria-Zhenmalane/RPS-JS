@@ -63,8 +63,15 @@ body {
 .buttons-parent {
   display: flex;
   border: 3px solid rgb(53, 255, 70);
+  display: center;
 }
 
 .buttons {
+  border: 3px solid rgb(53, 255, 70);
+  margin-right: 50px;
+
+}
+
+.rps-info {
   border: 3px solid rgb(53, 255, 70);
 }
