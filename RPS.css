@@ -3,7 +3,6 @@ body {
   color: white;
   font-family: Arial;
   margin: 0;
-  padding-top: 180px;
   display: flex;
   /* activates the flexbox*/
   flex-direction: column;
@@ -14,17 +13,6 @@ body {
 .header {
   height: 150px;
   display: flex;
-
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(212, 212, 212);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
 }
 
 .RPS {
@@ -43,7 +31,6 @@ body {
   height: 150px;
   border-radius: 80px;
   cursor: pointer;
-
 }
 
 .result {
@@ -61,7 +48,7 @@ body {
   font-size: 15px;
   padding: 9px 15px;
   border: none;
-  background-color: white;
+  border-radius: 30px;
   cursor: pointer;
 }
 
@@ -76,7 +63,6 @@ body {
 .buttons {
   border: 3px solid rgb(53, 255, 70);
 
-
 }
 
 .rps-info {
@@ -85,6 +71,4 @@ body {
   flex-direction: column;
   Width: 400px;
   border: 3px solid rgb(53, 255, 70);
-  align-items: center;
-
 }

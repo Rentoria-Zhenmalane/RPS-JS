@@ -52,9 +52,7 @@
 
   <div class="rps-info">
     <p class="js-result result">Choose your move</p>
-
     <p class="js-move"> </p>
-
     <p class="js-score score"></p>
 
     <button class="reset-score-button" onclick="
@@ -62,7 +60,9 @@
     score.losses = 0;
     score.ties = 0; 
     localStorage.removeItem('score');
-    updateScoreElement(); // 
+    updateScoreElement(); 
+
+    updateScoreElement(); 
     ">
       Reset Score
     </button>
