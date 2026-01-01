@@ -32,6 +32,21 @@ body {
   height: 150px;
   border-radius: 80px;
   cursor: pointer;
+
+  transition: transform 0.2s ease;
+  /* If the transform property changes, animate that change smoothly in 0.2 seconds.*/
+}
+
+.move-button:active {
+  transform: scale(0.9);
+  /*shrinks the button to 80 percent when clicked */
+}
+
+/* :active is a pseudoclass, applies only while the mouse button is being pressed */
+
+.clicked {
+  /* A dynamic class added by Javascript, does not appear in HTML */
+  transform: scale(0.5);
 }
 
 .move-result {

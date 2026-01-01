@@ -119,3 +119,13 @@ function pickComputerMove() {
 
   //7:36:33
 }
+
+function handleClick(button, playermove) {
+  playGame(playerMove);
+
+  button.classList.add('clicked');
+
+  setTimeout(() => {
+    button.classList.remove('clicked');
+  }, 100);
+}
