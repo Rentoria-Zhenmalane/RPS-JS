@@ -10,63 +10,78 @@
 <body>
 
   <header class="header">
-    <p class="RPS">Rock Paper Scissors</p>
+    <h1 class="RPS">Rock Paper Scissors</h1>
   </header>
 
-  <div class="buttons-parent">
-    <div class="buttons">
-      <button onclick="
-      playGame('Rock');
-    " class="move-button">
-        <img src="images/rock-emoji.png" class="move-icon"> </button>
-    </div>
+  <main>
+    <section class="buttons-parent">
+      <div class="buttons">
+        <button onclick="
+        playGame('Rock');
+      " class="move-button">
+          <img src="images/rock-emoji.png" class="move-icon"> </button>
+      </div>
 
-    <div class="buttons">
-      <button onclick="
-    playGame('Paper');
-    " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
-    </div>
+      <div class="buttons">
+        <button onclick="
+      playGame('Paper');
+      " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+      </div>
 
-    <div class="buttons">
-      <button onclick="
-    /*
-      const computerMove = pickComputerMove(); //computerMove is a different variable from other computerMove because of the scope
-      let result = '';
+      <div class="buttons">
+        <button onclick="
+      /*
+        const computerMove = pickComputerMove(); //computerMove is a different variable from other computerMove because of the scope
+        let result = '';
 
-      if (computerMove === 'Rock'){
-        result = 'You lose.';
-     }else if(computerMove === 'Paper'){
-        result = 'You win';
-     }else if (computerMove === 'Scissors'){
-        result = 'It\'s a tie';
-      }
+        if (computerMove === 'Rock'){
+          result = 'You lose.';
+        }else if(computerMove === 'Paper'){
+          result = 'You win';
+        }else if (computerMove === 'Scissors'){
+          result = 'It\'s a tie';
+        }
 
-      alert(`You picked scissors. Computer picked ${computerMove}. ${result}`)
-      */
+        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`)
+        */
 
-      playGame('Scissors');
-      " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
-    </div>
-  </div>
+        playGame('Scissors');
+        " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
+      </div>
+    </section>
 
 
-  <div class="rps-info">
-    <p class="js-result result">Choose your move</p>
-    <p class="js-move"> </p>
-    <p class="js-score score"></p>
+    <section class="rps-info">
+      <div>
+        <p class="js-result result">Choose your move</p>
+      </div>
 
-    <button class="reset-score-button" onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0; 
-    localStorage.removeItem('score');
-    updateScoreElement(); 
+      <div class="move-result">
+        <p class="js-move"> </p>
+      </div>
+      <div>
+        <p class="js-score score"></p>
+      </div>
 
-    updateScoreElement(); 
-    ">
-      Reset Score
-    </button>
-  </div>
+      <div>
+        <button class="reset-score-button" onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0; 
+        localStorage.removeItem('score');
+        updateScoreElement(); 
+        ">
+          Reset Score
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Rock Paper Scissor by ZHENMALANE A. RENTORIA</p>
+  </footer>
+
 
 
   <script src="RPS.js"> </script>
@@ -77,4 +92,12 @@
 
 <!--
 -Everything that is visible must be inside the body. Ex., Can't put header outside the body.
+
+-Do not include script inside main. It breaks semnatics meaning.
+
+SEMNATICS:
+-Main
+-Header
+-Section
+  
 -->
