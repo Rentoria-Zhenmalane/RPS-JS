@@ -3,17 +3,15 @@ body {
   color: white;
   font-family: Arial;
   margin: 0;
-  display: flex;
-  /* activates the flexbox*/
-  flex-direction: column;
-  align-items: center;
+
 
 }
 
 .header {
-  margin-top: 75px;
-  height: 150px;
+  margin-top: 50px;
+  height: 100px;
   display: flex;
+  justify-content: center;
 }
 
 .RPS {
@@ -44,6 +42,11 @@ body {
 
 /* :active is a pseudoclass, applies only while the mouse button is being pressed */
 
+.move-button:hover {
+  background-color: rgba(126, 126, 126, 0.3);
+  transition: 0.2s;
+}
+
 .clicked {
   /* A dynamic class added by Javascript, does not appear in HTML */
   transform: scale(0.5);
@@ -55,8 +58,9 @@ body {
   justify-content: center;
   width: 350px;
   height: 150px;
-  border: 2px solid white;
+  border: 2px solid rgb(42, 42, 42);
   border-radius: 175px;
+  background-color: rgba(46, 46, 46, 0.3);
 
 }
 
@@ -64,6 +68,8 @@ body {
   font-size: 25px;
   font-weight: bold;
   margin-top: 50px;
+  border-bottom: 2px solid rgb(42, 42, 42);
+  padding-bottom: 10px;
 
 }
 
@@ -79,13 +85,51 @@ body {
   cursor: pointer;
 }
 
+.reset-score-button:hover {
+  background-color: rgb(82, 82, 255);
+  color: white;
+  transition: background-color 0.16s,
+    color 0.12s;
+}
+
+.reset-score-button:active {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  transition: 0.15s;
+}
+
 .buttons-parent {
-  display: flex;
-  /* makes children line up horizontally*/
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+}
+
+@media (max-width: 600px) {
+  .buttons-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    transition: 0.20s;
+  }
+
+  .move-button {
+    width: 100px;
+    height: 100px;
+    transition: 0.20s;
+  }
+
 
 }
 
+.game {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  /* activates the flexbox*/
+  flex-direction: column;
+  align-items: center;
+  /*min-height: calc(100vh - 180px); */
+  justify-content: center;
+
+}
 
 .rps-info {
   display: flex;
@@ -95,6 +139,6 @@ body {
 }
 
 .footer {
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 13px;
 }

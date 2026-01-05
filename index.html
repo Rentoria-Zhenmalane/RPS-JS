@@ -13,24 +13,24 @@
     <h1 class="RPS">Rock Paper Scissors</h1>
   </header>
 
-  <main>
+  <main class="game">
     <section class="buttons-parent">
       <div class="buttons">
         <button onclick="
         handleClick(this,'Rock'); /* 'this' refers to exact button that was clicked, So JS knows which button to animate*/
-      " class="move-button">
+        " class="move-button">
           <img src="images/rock-emoji.png" class="move-icon"> </button>
       </div>
 
       <div class="buttons">
         <button onclick="
-      handleClick(this,'Paper');
-      " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+        handleClick(this,'Paper');
+       " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
       </div>
 
       <div class="buttons">
         <button onclick="
-      /*
+        /*
         const computerMove = pickComputerMove(); //computerMove is a different variable from other computerMove because of the scope
         let result = '';
 
@@ -76,13 +76,14 @@
       </div>
     </section>
 
+
+
+
   </main>
 
   <footer class="footer">
     <p>© 2026 Rock Paper Scissor by SHANE (Cutiee) A. RENTORIA</p>
   </footer>
-
-
 
   <script src="RPS.js"> </script>
 

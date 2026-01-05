@@ -120,7 +120,7 @@ function pickComputerMove() {
   //7:36:33
 }
 
-function handleClick(button, playermove) {
+function handleClick(button, playerMove) {
   playGame(playerMove);
 
   button.classList.add('clicked');
@@ -128,4 +128,6 @@ function handleClick(button, playermove) {
   setTimeout(() => {
     button.classList.remove('clicked');
   }, 100);
+
+
 }
