@@ -4,7 +4,6 @@ body {
   font-family: Arial;
   margin: 0;
 
-
 }
 
 .header {
@@ -106,9 +105,8 @@ body {
 
 @media (max-width: 600px) {
   .buttons-parent {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    transition: 0.20s;
   }
 
   .move-button {
@@ -117,6 +115,47 @@ body {
     transition: 0.20s;
   }
 
+  .move-result {
+    width: 280px;
+    height: 125px;
+    transition: 0.30s;
+  }
+
+  .result {
+    font-size: 22px;
+    transition: 0.20s;
+  }
+
+
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+  .buttons-parent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+  }
+
+  .move-button {
+    width: 150px;
+    height: 150px;
+    transition: 0.30s;
+  }
+
+  .move-result {
+    width: 350px;
+    height: 150px;
+    transition: 0.30s;
+  }
+
+  .result {
+    font-size: 25px;
+    transition: 0.20s;
+  }
+
+  .js-move {
+    font-size: 15px;
+    transition: 0.20s;
+  }
 
 }
 
@@ -139,6 +178,8 @@ body {
 }
 
 .footer {
-  margin-top: 50px;
+  padding-top: 20px;
   font-size: 13px;
+  display: flex;
+  justify-content: center;
 }

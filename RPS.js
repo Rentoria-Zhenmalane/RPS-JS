@@ -6,7 +6,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   losses: 0,
   ties: 0
 };
-
+// score is outside the function because we need to update the score from the last time. If it's inside a function it will update the score every time we make a move
 //shortcut to fix the error of null value
 //Loads the score from localStorage through getItem.
 //convert it back into an object.
