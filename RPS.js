@@ -45,13 +45,45 @@ function AutoPlaying() { //why not use arrow function here? Beacuse regular func
   } else {
     clearInterval(intervalID);
     isAutoPlaying = false;
-
   }
-
   // If the consition is true then start AutoPlaying else Stop.
-
 }
+/*
+document.querySelector('.js-rock-button')
+  .addEventListener('click', () => {
+    handleClick(this, 'Rock')  //called anonymous function, or also callback function.
+  });
+//Why wrap it in anonymous function? Why not call handleClick(this, 'Rock') directly? Because handleClick(this, 'Rock') would run right away when the script loads. The result of that function call (likely undefined) would be passed to addEventListener, which is useless.
+*/
 
+document.querySelector('.js-rock-button')
+  .addEventListener('click', function () {
+    handleClick(this, 'Rock');
+  });
+
+document.querySelector('.js-paper-button')
+  .addEventListener('click', function () {
+    handleClick(this, 'Paper')
+  });
+
+document.querySelector('.js-scissor-button')
+  .addEventListener('click', function () {
+    handleClick(this, 'Scissors')
+  });
+//Used regular function here because of 'this' in an event listener.
+//this part is for click event.
+
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    handleClick(document.querySelector('.js-rock-button'), 'Rock');
+  } else if (event.key === 'p') {
+    handleClick(document.querySelector('.js-paper-button'), 'Paper')
+  } else if (event.key === 's') {
+    handleClick(document.querySelector('.js-scissor-button'), 'Scissor')
+  }
+});
+//this part is when player pressed rps keys.
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();

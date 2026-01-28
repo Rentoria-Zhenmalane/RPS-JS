@@ -12,41 +12,27 @@
   <header class="header">
     <h1 class="RPS">Rock Paper Scissors</h1>
   </header>
-
   <main class="game">
     <section class="buttons-parent">
+      <!--
       <div class="buttons">
         <button onclick="
         handleClick(this,'Rock'); /* 'this' refers to exact button that was clicked, So JS knows which button to animate*/
-        " class="move-button">
+        " class="move-button js-rock-button">
           <img src="images/rock-emoji.png" class="move-icon"> </button>
       </div>
-
+-->
       <div class="buttons">
-        <button onclick="
-        handleClick(this,'Paper');
-       " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+        <button class="move-button js-rock-button">
+          <img src="images/rock-emoji.png" class="move-icon"> </button>
+      </div>
+r
+      <div class="buttons">
+        <button class="move-button js-paper-button"><img src="images/paper-emoji.png" class="move-icon"></button>
       </div>
 
       <div class="buttons">
-        <button onclick="
-        /*
-        const computerMove = pickComputerMove(); //computerMove is a different variable from other computerMove because of the scope
-        let result = '';
-
-        if (computerMove === 'Rock'){
-          result = 'You lose.';
-        }else if(computerMove === 'Paper'){
-          result = 'You win';
-        }else if (computerMove === 'Scissors'){
-          result = 'It\'s a tie';
-        }
-
-        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`)
-        */
-
-        handleClick(this,'Scissors');
-        " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
+        <button class="move-button js-scissor-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
       </div>
     </section>
 
@@ -104,4 +90,19 @@ SEMNATICS:
 -Header
 -Section
   
+-->
+<!--
+
+ const computerMove = pickComputerMove(); //computerMove is a different variable from other computerMove because of the scope
+        let result = '';
+
+        if (computerMove === 'Rock'){
+          result = 'You lose.';
+        }else if(computerMove === 'Paper'){
+          result = 'You win';
+        }else if (computerMove === 'Scissors'){
+          result = 'It\'s a tie';
+        }
+
+        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`)
 -->
