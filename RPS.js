@@ -80,7 +80,7 @@ document.body.addEventListener('keydown', (event) => {
   } else if (event.key === 'p') {
     handleClick(document.querySelector('.js-paper-button'), 'Paper')
   } else if (event.key === 's') {
-    handleClick(document.querySelector('.js-scissor-button'), 'Scissor')
+    handleClick(document.querySelector('.js-scissor-button'), 'Scissors')
   }
 });
 //this part is when player pressed rps keys.
